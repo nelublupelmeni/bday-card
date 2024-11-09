@@ -1,0 +1,45 @@
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eae1e1;
+}
+
+.card {
+    height: 340px;
+    width: 250px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    }
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    }
+
+.front {
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.container:hover  .card{
+    transform: rotateY(180deg);
+}
+
+.container{
+    perspective: 1000px;
+}
+
